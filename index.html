@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spotify Music Recommender</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🎵 Spotify Music Recommendation System</h1>
+
+        <p class="subtitle">
+            Discover songs similar to your favorite tracks
+        </p>
+
+        <form action="/recommend" method="POST">
+
+            <input
+                type="text"
+                name="song"
+                placeholder="Enter Song Name..."
+                required>
+
+            <button type="submit">
+                Recommend Songs
+            </button>
+
+        </form>
+
+        {% if selected_song %}
+            <div class="selected-song">
+                <h2>Selected Song</h2>
+                <p>{{ selected_song }}</p>
+            </div>
+        {% endif %}
+
+        {% if recommendations %}
+
+            <div class="recommendation-box">
+
+                <h2>Recommended Songs</h2>
+
+                <ul>
+
+                    {% for song in recommendations %}
+
+                        <li>
+                            🎶 {{ song }}
+                        </li>
+
+                    {% endfor %}
+
+                </ul>
+
+            </div>
+
+        {% endif %}
+
+    </div>
+
+</body>
+</html>

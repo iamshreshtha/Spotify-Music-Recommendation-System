@@ -1,0 +1,86 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background-image:url('/static/cover.jpg');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container{
+    width:700px;
+    background:rgba(0,0,0,0.75);
+    padding:40px;
+    border-radius:15px;
+    color:white;
+    text-align:center;
+    box-shadow:0 0 20px rgba(0,0,0,0.5);
+}
+
+h1{
+    margin-bottom:15px;
+    color:#1DB954;
+}
+
+.subtitle{
+    margin-bottom:25px;
+    color:#ddd;
+}
+
+input{
+    width:70%;
+    padding:12px;
+    border:none;
+    border-radius:5px;
+    font-size:16px;
+}
+
+button{
+    padding:12px 20px;
+    background:#1DB954;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:16px;
+    margin-left:10px;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.selected-song{
+    margin-top:25px;
+}
+
+.recommendation-box{
+    margin-top:30px;
+}
+
+ul{
+    list-style:none;
+    margin-top:20px;
+}
+
+li{
+    background:rgba(255,255,255,0.1);
+    margin:10px 0;
+    padding:12px;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+li:hover{
+    background:rgba(255,255,255,0.2);
+}
